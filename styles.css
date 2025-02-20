@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e94560;
+}
+
+/* Título principal */
+h1 {
+  font-size: 4rem;
+  color: #e94560;
+  text-shadow: 0 0 10px #e94560, 0 0 20px #e94560;
+  margin: 20px 0;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #e94560, 0 0 20px #e94560;
+  }
+  100% {
+    text-shadow: 0 0 20px #e94560, 0 0 40px #e94560;
+  }
+}
+
+/* Subtítulo */
+#subtitle {
+  font-size: 1.2rem;
+  color: #0f3460;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 40px;
+}
+
+/* Pie de página */
+footer {
+  color: #0f3460;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: auto;
+  padding: 20px;
+  background-color: rgba(15, 52, 96, 0.1);
+  width: 100%;
+}
+
+footer a {
+  color: #e94560;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0f3460;
+}
+
+/* Contenedor de los botones de batería */
+.set {
+  margin: 5% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Estilos base para los botones de batería */
+.drum {
+  outline: none;
+  border: 5px solid #0f3460;
+  font-size: 3rem;
+  line-height: 2;
+  font-weight: 900;
+  color: #e94560;
+  text-shadow: 0 0 5px #e94560;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+}
+
+/* Efecto al presionar un botón */
+.drum.pressed {
+  box-shadow: 0 0 20px #e94560;
+  transform: scale(0.95);
+  background-color: rgba(233, 69, 96, 0.2);
+}
+
+/* Efecto hover en los botones */
+.drum:hover {
+  background-color: rgba(233, 69, 96, 0.3);
+  transform: scale(1.1);
+}
+
+/* Colores y fondos específicos para cada botón */
+.w { background-image: url("images/tom1.png"); }
+.a { background-image: url("images/tom2.png"); }
+.s { background-image: url("images/tom3.png"); }
+.d { background-image: url("images/tom4.png"); }
+.j { background-image: url("images/snare.png"); }
+.k { background-image: url("images/crash.png"); }
+.l { background-image: url("images/kick.png"); }
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .drum {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+
+  #subtitle {
+    font-size: 1rem;
+  }
+}
